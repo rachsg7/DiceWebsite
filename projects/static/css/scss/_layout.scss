@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Philosopher', sans-serif;
+    background-color: #F5F5F5;
+    min-height: 100%;
+}
+
+header {
+    position: relative;
+    background-color: white;
+    img {
+        max-width: 200px;
+        padding: 25px;
+    }
+    nav {
+        #links {
+            display: none;
+            background-color: gray;
+            @include medium {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        a {
+            display: block;
+            background-color: gray;
+            color: white;
+            padding: 40px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        a.icon {
+            background: white;
+            color: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 3em;
+            padding: 73px 38px 76px 38px;
+            @include medium {
+                display: none;
+            }
+        }
+        a.icon:hover {
+            background-color: #ddd;
+            color: black;
+        }
+         :hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+section {
+    padding: 0 30px 0 30px;
+    h1 {
+        font-size: 2em;
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    p {
+        font-size: 1em;
+        margin: 2rem 0;
+        @include medium {
+            font-size: 1.4em;
+            max-width: 75%;
+        }
+        @include large {
+            font-size: 1.7em;
+            max-width: 50%;
+        }
+    }
+}
+
+div.card_container {
+    @include medlarge {
+        // max-width: 75%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+section.dice_card {
+    background-color: white;
+    padding: 2em;
+    border-radius: 5px;
+    @include medium {
+        max-width: 75%;
+        margin: 0 auto 2em;
+    }
+    @include medlarge {
+        max-width: 90%;
+    }
+    @include large {
+        max-width: 25%;
+    }
+    margin-bottom: 2em;
+}
+
+section.dice_card a {
+    text-decoration: none;
+    color: black;
+}
+
+section.product {
+    @include medium {
+        margin: auto;
+        padding-top: 4rem;
+        max-width: 75%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 0fr 0fr 0fr;
+        grid-gap: 15px;
+    }
+    @include medlarge {
+        max-width: 60%;
+    }
+    @include large {
+        max-width: 50%;
+    }
+}
+
+h1.dice_name {
+    @include medium {
+        grid-column: 1 / 4;
+    }
+    @include medlarge {
+        grid-column: 2 / 4;
+    }
+}
+
+img.product {
+    max-width: 100%;
+    @include medium {
+        max-width: 75%;
+    }
+    @include medlarge {
+        max-width: 60%;
+    }
+    @include large {
+        max-width: 40%;
+    }
+}
+
+div.img_container {
+    @include medium {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+    @include medlarge {
+        grid-row: 1 / 4;
+    }
+    @include large {
+        max-width: 75%;
+    }
+}
+
+p.dice_description {
+    @include medium {
+        grid-column: 2 / 4;
+    }
+}
+
+button.cart {
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 32px;
+    color: black;
+    background-color: #F4D06F;
+    margin: 1em 0;
+    @include medium {
+        grid-column: 2/3;
+        width: 200px;
+        height: 100px;
+    }
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+h2.dice_card,
+p.dice_card {
+    margin: 0.1em;
+}
+
+img.dice_img {
+    max-width: 100%;
+}
+
+.sold {
+    filter: grayscale(1)
+}
+
+.body_content {
+    margin: auto;
+    background-color: white;
+    margin-top: 0;
+    @include medium {
+        max-width: 75%;
+    }
+    @include large {
+        max-width: 50%;
+        // height: 100%;
+        // padding-bottom: 25vh;
+    }
+    @include exlarge {
+        height: 100%;
+    }
+}
+
+footer {
+    background-color: lightgray;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        color: darkgrey;
+    }
+    @include large {
+        // position: absolute;
+        // bottom: 0;
+        width: 100%;
+    }
+}
+
+// Test
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="product">
+    <h1 class="dice_name">{{dice.name}}{% if dice.sold %} - Sold{% endif %}</h1>
+    <p class="dice_description">{{dice.description}}</p>
+    <button class="cart" {% if dice.sold %}disabled{% endif %}>Add to Cart</button>
+    <div class="img_container">
+        {% for image in images %}
+        <img class="dice_img" src="../../static/{{ image.url }}"> {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

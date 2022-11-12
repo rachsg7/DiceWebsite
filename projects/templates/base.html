@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tressym Dice</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/css/style.css' %}">
+    <script src="{% static 'javascript/script.js' %}" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'images/tressym_dice_transparent.jpg' %}" alt="Tressym Dice Logo">
+        <nav>
+            <div id="links">
+                <a href="/">Home</a>
+                <a href="/dice">Store</a>
+                <a href="/about">About</a>
+                <!-- <a href="#contact">Contact</a> -->
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="openHamburger()">&#8801;</a>
+        </nav>
+    </header>
+    <div class="body_content">
+        {% block content %} {% endblock %}
+    </div>
+    <footer>
+        <p>Copyright &copy; Tressym Dice 2022</p>
+        <p><a href="https://www.instagram.com/tressym.dice/" target="_blank">Instagram</a></p>
+    </footer>
+</body>
+
+</html>

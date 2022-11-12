@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+
+<section>
+    <h1>Hello!</h1>
+    <p>Welcome to Tressym Dice. I make handmade dice to be used in tabletop RPG games. </p>
+</section>
+
+<section>
+    <h1>Featured Products</h1>
+</section>
+
+
+
+<div class="card_container">
+    {% for dice_set in dice %}
+    <section class="dice_card">
+        {% with dice_set.image_set.all|first as image %}
+        <a href="{% url 'dice_page' dice_set.pk %}">
+            <img class="dice_img" src="static/{{ image.url }}"> {% endwith %}
+            <h2 class="dice_card">{{dice_set.name}}</h2>
+            <p class="dice_card">${{dice_set.price}}</p>
+        </a>
+    </section>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
